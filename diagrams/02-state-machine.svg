@@ -1,17 +1,11 @@
-<svg width="100%" height="100%" viewBox="0 0 960 560" xmlns="http://www.w3.org/2000/svg">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420">
   <defs>
     <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#0284C7" />
       <stop offset="50%" stop-color="#6366F1" />
       <stop offset="100%" stop-color="#10B981" />
     </linearGradient>
-    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1E293B" />
-      <stop offset="100%" stop-color="#0F172A" />
-    </linearGradient>
-    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.35" />
-    </filter>
     <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M 0 1 L 9 5 L 0 9 z" fill="#38BDF8" />
     </marker>
@@ -27,166 +21,165 @@
   </defs>
 
   <!-- Container Canvas -->
-  <rect x="2" y="2" width="956" height="556" rx="14" fill="#0B132B" stroke="#334155" stroke-width="2" />
-  <rect x="2" y="2" width="956" height="6" rx="3" fill="url(#headerGrad)" />
+  <rect x="2" y="2" width="956" height="416" rx="12" fill="#0B132B" stroke="#334155" stroke-width="2" />
+  <rect x="2" y="2" width="956" height="5" rx="2" fill="url(#headerGrad)" />
 
   <!-- Header Section -->
-  <g transform="translate(30, 36)">
-    <circle cx="12" cy="12" r="12" fill="#0284C7" />
-    <path d="M 7 12 L 11 16 L 17 8" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" />
-    <text x="34" y="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#F8FAFC">VoxFlow Voice Call State Machine</text>
-    <text x="34" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Multi-Factor Identity, Deterministic Routing, Confirmation Gates & Safe Escalation</text>
+  <g transform="translate(24, 30)">
+    <circle cx="10" cy="10" r="10" fill="#0284C7" />
+    <path d="M 6 10 L 9 13 L 14 7" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" />
+    <text x="28" y="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#F8FAFC">VoxFlow Voice Call State Machine</text>
+    <text x="28" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Multi-Factor Identity, Deterministic Routing, Confirmation Gates &amp; Safe Escalation</text>
   </g>
 
   <!-- Node: 1. Inbound Call -->
-  <g filter="url(#shadow)">
-    <rect x="40" y="100" width="160" height="80" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="1.8" />
+  <g>
+    <rect x="30" y="80" width="205" height="74" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="1.6" />
     
-    <rect x="125" y="108" width="65" height="18" rx="9" fill="#38BDF8" fill-opacity="0.2" stroke="#38BDF8" stroke-width="1" />
-    <text x="157.5" y="120" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#38BDF8" text-anchor="middle">INIT</text>
-    <text x="56" y="124" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">1. Inbound Call</text>
-    <text x="56" y="144" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">DID Routing
-Recording notice</text>
+    <rect x="170" y="87" width="55" height="16" rx="8" fill="#38BDF8" fill-opacity="0.2" stroke="#38BDF8" stroke-width="1" />
+    <text x="197.5" y="98.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#38BDF8" text-anchor="middle">INIT</text>
+    <text x="44" y="102" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">1. Inbound Call</text>
+    <text x="44" y="120" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="44" dy="0">DID exact routing</tspan><tspan x="44" dy="14">Recording disclosure</tspan></text>
   </g>
-  <!-- Node: 2. Identity Verification -->
-  <g filter="url(#shadow)">
-    <rect x="240" y="100" width="180" height="80" rx="10" fill="#1E293B" stroke="#0284C7" stroke-width="1.8" />
+  <!-- Node: 2. Caller 2FA Identity -->
+  <g>
+    <rect x="265" y="80" width="205" height="74" rx="8" fill="#1E293B" stroke="#0284C7" stroke-width="1.6" />
     
-    <rect x="345" y="108" width="65" height="18" rx="9" fill="#0284C7" fill-opacity="0.2" stroke="#0284C7" stroke-width="1" />
-    <text x="377.5" y="120" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#0284C7" text-anchor="middle">2FA</text>
-    <text x="256" y="124" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">2. Identity Verification</text>
-    <text x="256" y="144" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Account + 1 factor
-Max 2 attempts</text>
+    <rect x="405" y="87" width="55" height="16" rx="8" fill="#0284C7" fill-opacity="0.2" stroke="#0284C7" stroke-width="1" />
+    <text x="432.5" y="98.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#0284C7" text-anchor="middle">2FA</text>
+    <text x="279" y="102" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">2. Caller 2FA Identity</text>
+    <text x="279" y="120" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="279" dy="0">Account + 1 factor</tspan><tspan x="279" dy="14">Max 2 attempts limit</tspan></text>
   </g>
-  <!-- Node: 3. Intent Detection -->
-  <g filter="url(#shadow)">
-    <rect x="460" y="100" width="180" height="80" rx="10" fill="#1E293B" stroke="#818CF8" stroke-width="1.8" />
+  <!-- Node: 3. Intent Routing -->
+  <g>
+    <rect x="500" y="80" width="205" height="74" rx="8" fill="#1E293B" stroke="#818CF8" stroke-width="1.6" />
     
-    <rect x="565" y="108" width="65" height="18" rx="9" fill="#818CF8" fill-opacity="0.2" stroke="#818CF8" stroke-width="1" />
-    <text x="597.5" y="120" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#818CF8" text-anchor="middle">ROUTER</text>
-    <text x="476" y="124" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">3. Intent Detection</text>
-    <text x="476" y="144" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Slot & reference extraction
-Bounded tool intent</text>
+    <rect x="639" y="87" width="56" height="16" rx="8" fill="#818CF8" fill-opacity="0.2" stroke="#818CF8" stroke-width="1" />
+    <text x="667.0" y="98.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#818CF8" text-anchor="middle">ROUTER</text>
+    <text x="514" y="102" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">3. Intent Routing</text>
+    <text x="514" y="120" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="514" dy="0">Slot &amp; reference parse</tspan><tspan x="514" dy="14">Bounded tool surface</tspan></text>
   </g>
-  <!-- Node: 4. Policy & Security Gate -->
-  <g filter="url(#shadow)">
-    <rect x="680" y="100" width="240" height="80" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.8" />
+  <!-- Node: 4. Policy Gate -->
+  <g>
+    <rect x="735" y="80" width="195" height="74" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.6" />
     
-    <rect x="845" y="108" width="65" height="18" rx="9" fill="#F59E0B" fill-opacity="0.2" stroke="#F59E0B" stroke-width="1" />
-    <text x="877.5" y="120" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#F59E0B" text-anchor="middle">GATE</text>
-    <text x="696" y="124" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">4. Policy & Security Gate</text>
-    <text x="696" y="144" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Read: Authorized
-Write: Confirmation / PIN</text>
+    <rect x="865" y="87" width="55" height="16" rx="8" fill="#F59E0B" fill-opacity="0.2" stroke="#F59E0B" stroke-width="1" />
+    <text x="892.5" y="98.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#F59E0B" text-anchor="middle">GATE</text>
+    <text x="749" y="102" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">4. Policy Gate</text>
+    <text x="749" y="120" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="749" dy="0">Read: Authorized</tspan><tspan x="749" dy="14">Write: Gate required</tspan></text>
   </g>
   <!-- Node: High-Impact PIN Gate -->
-  <g filter="url(#shadow)">
-    <rect x="40" y="260" width="240" height="80" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.8" />
+  <g>
+    <rect x="30" y="205" width="215" height="74" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.6" />
     
-    <rect x="205" y="268" width="65" height="18" rx="9" fill="#F59E0B" fill-opacity="0.2" stroke="#F59E0B" stroke-width="1" />
-    <text x="237.5" y="280" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#F59E0B" text-anchor="middle">PIN</text>
-    <text x="56" y="284" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">High-Impact PIN Gate</text>
-    <text x="56" y="304" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">4-8 digit caller PIN
-PBKDF2-HMAC-SHA256</text>
+    <rect x="180" y="212" width="55" height="16" rx="8" fill="#F59E0B" fill-opacity="0.2" stroke="#F59E0B" stroke-width="1" />
+    <text x="207.5" y="223.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#F59E0B" text-anchor="middle">PIN</text>
+    <text x="44" y="227" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">High-Impact PIN Gate</text>
+    <text x="44" y="245" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="44" dy="0">4-8 digit caller PIN</tspan><tspan x="44" dy="14">PBKDF2-HMAC-SHA256</tspan></text>
   </g>
-  <!-- Node: Explicit Confirmation Gate -->
-  <g filter="url(#shadow)">
-    <rect x="320" y="260" width="260" height="80" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.8" />
+  <!-- Node: Confirmation Gate -->
+  <g>
+    <rect x="275" y="205" width="225" height="74" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.6" />
     
-    <rect x="505" y="268" width="65" height="18" rx="9" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1" />
-    <text x="537.5" y="280" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#10B981" text-anchor="middle">WRITE</text>
-    <text x="336" y="284" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">Explicit Confirmation Gate</text>
-    <text x="336" y="304" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Yes/No bound to exact args hash
-Idempotency deduplication</text>
+    <rect x="427" y="212" width="63" height="16" rx="8" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1" />
+    <text x="458.5" y="223.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#10B981" text-anchor="middle">CONFIRM</text>
+    <text x="289" y="227" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">Confirmation Gate</text>
+    <text x="289" y="245" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="289" dy="0">Explicit verbal yes</tspan><tspan x="289" dy="14">Bound to args hash</tspan></text>
   </g>
-  <!-- Node: 5. Tool Execution & Validation -->
-  <g filter="url(#shadow)">
-    <rect x="620" y="260" width="300" height="80" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.8" />
+  <!-- Node: Tool Execution -->
+  <g>
+    <rect x="530" y="205" width="225" height="74" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.6" />
     
-    <rect x="845" y="268" width="65" height="18" rx="9" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1" />
-    <text x="877.5" y="280" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#10B981" text-anchor="middle">EXEC</text>
-    <text x="636" y="284" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">5. Tool Execution & Validation</text>
-    <text x="636" y="304" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Execute scoped tool
-Strict result schema check</text>
+    <rect x="690" y="212" width="55" height="16" rx="8" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1" />
+    <text x="717.5" y="223.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#10B981" text-anchor="middle">EXEC</text>
+    <text x="544" y="227" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">Tool Execution</text>
+    <text x="544" y="245" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="544" dy="0">Scoped tenant query</tspan><tspan x="544" dy="14">Strict result check</tspan></text>
   </g>
-  <!-- Node: 6A. Grounded Spoken Output -->
-  <g filter="url(#shadow)">
-    <rect x="40" y="420" width="280" height="90" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.8" />
+  <!-- Node: Idempotency -->
+  <g>
+    <rect x="785" y="205" width="145" height="74" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.6" />
     
-    <rect x="245" y="428" width="65" height="18" rx="9" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1" />
-    <text x="277.5" y="440" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#10B981" text-anchor="middle">SUCCESS</text>
-    <text x="56" y="444" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">6A. Grounded Spoken Output</text>
-    <text x="56" y="464" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Speak allow-listed tool facts only
-Anti-hallucination lexical filter</text>
+    <rect x="865" y="212" width="55" height="16" rx="8" fill="#F59E0B" fill-opacity="0.2" stroke="#F59E0B" stroke-width="1" />
+    <text x="892.5" y="223.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#F59E0B" text-anchor="middle">IDEM</text>
+    <text x="799" y="227" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">Idempotency</text>
+    <text x="799" y="245" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="799" dy="0">Deduplicate key</tspan><tspan x="799" dy="14">Replay on match</tspan></text>
   </g>
-  <!-- Node: 6B. Graceful Escalation -->
-  <g filter="url(#shadow)">
-    <rect x="360" y="420" width="280" height="90" rx="10" fill="#1E293B" stroke="#F43F5E" stroke-width="1.8" />
+  <!-- Node: Grounded Spoken Output -->
+  <g>
+    <rect x="30" y="325" width="270" height="72" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.6" />
     
-    <rect x="565" y="428" width="65" height="18" rx="9" fill="#F43F5E" fill-opacity="0.2" stroke="#F43F5E" stroke-width="1" />
-    <text x="597.5" y="440" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#F43F5E" text-anchor="middle">ESCALATE</text>
-    <text x="376" y="444" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">6B. Graceful Escalation</text>
-    <text x="376" y="464" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Fixed escalation script
-Never invent status or ETAs</text>
+    <rect x="227" y="332" width="63" height="16" rx="8" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1" />
+    <text x="258.5" y="343.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#10B981" text-anchor="middle">SUCCESS</text>
+    <text x="44" y="347" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">Grounded Spoken Output</text>
+    <text x="44" y="365" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="44" dy="0">Speak allow-listed fields only</tspan><tspan x="44" dy="14">Anti-hallucination lexical filter</tspan></text>
   </g>
-  <!-- Node: 7. Call Closure & Ledger -->
-  <g filter="url(#shadow)">
-    <rect x="680" y="420" width="240" height="90" rx="10" fill="#1E293B" stroke="#64748B" stroke-width="1.8" />
+  <!-- Node: Safe Call Closure -->
+  <g>
+    <rect x="330" y="325" width="270" height="72" rx="8" fill="#1E293B" stroke="#0284C7" stroke-width="1.6" />
     
-    <rect x="845" y="428" width="65" height="18" rx="9" fill="#64748B" fill-opacity="0.2" stroke="#64748B" stroke-width="1" />
-    <text x="877.5" y="440" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#64748B" text-anchor="middle">LOG</text>
-    <text x="696" y="444" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">7. Call Closure & Ledger</text>
-    <text x="696" y="464" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Callback ticket in Postgres
-Structured call summary to Sheet</text>
+    <rect x="535" y="332" width="55" height="16" rx="8" fill="#0284C7" fill-opacity="0.2" stroke="#0284C7" stroke-width="1" />
+    <text x="562.5" y="343.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#0284C7" text-anchor="middle">EXIT</text>
+    <text x="344" y="347" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">Safe Call Closure</text>
+    <text x="344" y="365" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="344" dy="0">Zero-lost-turn state committed</tspan><tspan x="344" dy="14">Summary written to tenant sheet</tspan></text>
   </g>
-  <path d="M 200 140 L 240 140" stroke="#38BDF8" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+  <!-- Node: Deterministic Escalation -->
+  <g>
+    <rect x="630" y="325" width="300" height="72" rx="8" fill="#1E293B" stroke="#F43F5E" stroke-width="1.6" />
+    
+    <rect x="850" y="332" width="70" height="16" rx="8" fill="#F43F5E" fill-opacity="0.2" stroke="#F43F5E" stroke-width="1" />
+    <text x="885.0" y="343.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#F43F5E" text-anchor="middle">ESCALATE</text>
+    <text x="644" y="347" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">Deterministic Escalation</text>
+    <text x="644" y="365" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="644" dy="0">Fixed escalation script played</tspan><tspan x="644" dy="14">Structured callback ticket enqueued</tspan></text>
+  </g>
+  <path d="M 235 117 L 265 117" stroke="#38BDF8" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="192.5" y="130.0" width="55.0" height="20" rx="6" fill="#0B132B" stroke="#38BDF8" stroke-width="1" />
-    <text x="220.0" y="143.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Turn 1</text>
-  <path d="M 420 140 L 460 140" stroke="#0284C7" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="225.0" y="108.0" width="50" height="18" rx="5" fill="#0B132B" stroke="#38BDF8" stroke-width="0.9" />
+    <text x="250.0" y="120.0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Turn 1</text>
+  <path d="M 470 117 L 500 117" stroke="#0284C7" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="406.0" y="130.0" width="68.0" height="20" rx="6" fill="#0B132B" stroke="#0284C7" stroke-width="1" />
-    <text x="440.0" y="143.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Verified</text>
-  <path d="M 640 140 L 680 140" stroke="#818CF8" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="454.0" y="108.0" width="62" height="18" rx="5" fill="#0B132B" stroke="#0284C7" stroke-width="0.9" />
+    <text x="485.0" y="120.0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Verified</text>
+  <path d="M 705 117 L 735 117" stroke="#818CF8" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="629.25" y="130.0" width="61.5" height="20" rx="6" fill="#0B132B" stroke="#818CF8" stroke-width="1" />
-    <text x="660.0" y="143.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Matched</text>
-  <path d="M 780 180 C 780 220, 780 220, 780 260" stroke="#10B981" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="695.0" y="108.0" width="50" height="18" rx="5" fill="#0B132B" stroke="#818CF8" stroke-width="0.9" />
+    <text x="720.0" y="120.0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Parsed</text>
+  <path d="M 832 154 C 832 185, 642 185, 642 205" stroke="#10B981" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="742.75" y="210" width="74.5" height="20" rx="6" fill="#0B132B" stroke="#10B981" stroke-width="1" />
-    <text x="780" y="223.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Read Tool</text>
-  <path d="M 720 180 C 720 220, 450 220, 450 260" stroke="#34D399" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="718.0" y="176" width="38" height="18" rx="5" fill="#0B132B" stroke="#10B981" stroke-width="0.9" />
+    <text x="737" y="188" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Read</text>
+  <path d="M 800 154 C 800 185, 387 185, 387 205" stroke="#34D399" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="539.5" y="210" width="81.0" height="20" rx="6" fill="#0B132B" stroke="#34D399" stroke-width="1" />
-    <text x="580" y="223.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Write Tool</text>
-  <path d="M 700 180 C 700 210, 160 210, 160 260" stroke="#F59E0B" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="558.0" y="176" width="44" height="18" rx="5" fill="#0B132B" stroke="#34D399" stroke-width="0.9" />
+    <text x="580" y="188" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Write</text>
+  <path d="M 760 154 C 760 185, 137 185, 137 205" stroke="#F59E0B" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="290.0" y="200" width="120.0" height="20" rx="6" fill="#0B132B" stroke="#F59E0B" stroke-width="1" />
-    <text x="350" y="213.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">High Impact (PO)</text>
-  <path d="M 280 300 L 320 300" stroke="#10B981" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="295.0" y="176" width="110" height="18" rx="5" fill="#0B132B" stroke="#F59E0B" stroke-width="0.9" />
+    <text x="350" y="188" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">High-Impact (PO)</text>
+  <path d="M 245 242 L 275 242" stroke="#10B981" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="272.5" y="290.0" width="55.0" height="20" rx="6" fill="#0B132B" stroke="#10B981" stroke-width="1" />
-    <text x="300.0" y="303.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">PIN OK</text>
-  <path d="M 580 300 L 620 300" stroke="#10B981" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="235.0" y="233.0" width="50" height="18" rx="5" fill="#0B132B" stroke="#10B981" stroke-width="0.9" />
+    <text x="260.0" y="245.0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">PIN OK</text>
+  <path d="M 500 242 L 530 242" stroke="#10B981" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="562.75" y="290.0" width="74.5" height="20" rx="6" fill="#0B132B" stroke="#10B981" stroke-width="1" />
-    <text x="600.0" y="303.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Confirmed</text>
-  <path d="M 700 340 C 700 380, 180 380, 180 420" stroke="#10B981" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="481.0" y="233.0" width="68" height="18" rx="5" fill="#0B132B" stroke="#10B981" stroke-width="0.9" />
+    <text x="515.0" y="245.0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Confirmed</text>
+  <path d="M 755 242 L 785 242" stroke="#F59E0B" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="393.0" y="370" width="94.0" height="20" rx="6" fill="#0B132B" stroke="#10B981" stroke-width="1" />
-    <text x="440" y="383.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Schema Valid</text>
-  <path d="M 770 340 L 500 420" stroke="#F43F5E" stroke-width="1.8" fill="none" marker-end="url(#arrowRose)" />
+    <rect x="748.0" y="233.0" width="44" height="18" rx="5" fill="#0B132B" stroke="#F59E0B" stroke-width="0.9" />
+    <text x="770.0" y="245.0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Check</text>
+  <path d="M 642 279 C 642 305, 165 305, 165 325" stroke="#10B981" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="578.25" y="370.0" width="113.5" height="20" rx="6" fill="#0B132B" stroke="#F43F5E" stroke-width="1" />
-    <text x="635.0" y="383.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Timeout / Error</text>
-  <path d="M 330 180 C 330 230, 20 230, 20 465 L 360 465" stroke="#F43F5E" stroke-width="1.8" stroke-dasharray="4,4" fill="none" marker-end="url(#arrowRose)" />
+    <rect x="357.0" y="296" width="86" height="18" rx="5" fill="#0B132B" stroke="#10B981" stroke-width="0.9" />
+    <text x="400" y="308" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Schema Valid</text>
+  <path d="M 300 361 L 330 361" stroke="#10B981" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="103.0" y="230" width="94.0" height="20" rx="6" fill="#0B132B" stroke="#F43F5E" stroke-width="1" />
-    <text x="150" y="243.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">2 Mismatches</text>
-  <path d="M 320 465 L 680 465" stroke="#10B981" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="293.0" y="352.0" width="44" height="18" rx="5" fill="#0B132B" stroke="#10B981" stroke-width="0.9" />
+    <text x="315.0" y="364.0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Speak</text>
+  <path d="M 642 279 C 642 305, 780 305, 780 325" stroke="#F43F5E" stroke-width="1.6" fill="none" marker-end="url(#arrowRose)" />
   
-    <rect x="466.0" y="455.0" width="68.0" height="20" rx="6" fill="#0B132B" stroke="#10B981" stroke-width="1" />
-    <text x="500.0" y="468.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Resolved</text>
-  <path d="M 640 465 L 680 465" stroke="#F43F5E" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="659.0" y="296" width="104" height="18" rx="5" fill="#0B132B" stroke="#F43F5E" stroke-width="0.9" />
+    <text x="711" y="308" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Timeout / Error</text>
+  <path d="M 630 361 L 600 361" stroke="#F59E0B" stroke-width="1.6" fill="none" marker-end="url(#arrowAmber)" />
   
-    <rect x="603.25" y="455.0" width="113.5" height="20" rx="6" fill="#0B132B" stroke="#F43F5E" stroke-width="1" />
-    <text x="660.0" y="468.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Callback Raised</text></svg>
+    <rect x="581.0" y="352.0" width="68" height="18" rx="5" fill="#0B132B" stroke="#F59E0B" stroke-width="0.9" />
+    <text x="615.0" y="364.0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Log &amp; End</text></svg>

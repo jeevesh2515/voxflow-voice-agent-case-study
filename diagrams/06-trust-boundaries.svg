@@ -1,17 +1,11 @@
-<svg width="100%" height="100%" viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420">
   <defs>
     <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#0284C7" />
       <stop offset="50%" stop-color="#6366F1" />
       <stop offset="100%" stop-color="#10B981" />
     </linearGradient>
-    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1E293B" />
-      <stop offset="100%" stop-color="#0F172A" />
-    </linearGradient>
-    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.35" />
-    </filter>
     <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M 0 1 L 9 5 L 0 9 z" fill="#38BDF8" />
     </marker>
@@ -27,146 +21,143 @@
   </defs>
 
   <!-- Container Canvas -->
-  <rect x="2" y="2" width="956" height="536" rx="14" fill="#0B132B" stroke="#334155" stroke-width="2" />
-  <rect x="2" y="2" width="956" height="6" rx="3" fill="url(#headerGrad)" />
+  <rect x="2" y="2" width="956" height="416" rx="12" fill="#0B132B" stroke="#334155" stroke-width="2" />
+  <rect x="2" y="2" width="956" height="5" rx="2" fill="url(#headerGrad)" />
 
   <!-- Header Section -->
-  <g transform="translate(30, 36)">
-    <circle cx="12" cy="12" r="12" fill="#0284C7" />
-    <path d="M 7 12 L 11 16 L 17 8" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" />
-    <text x="34" y="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#F8FAFC">VoxFlow Multi-Tenant Trust & Isolation Boundaries</text>
-    <text x="34" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Exact-DID Inbound Routing, HMAC Signed Bridge & Zero Cross-Tenant Data Leakage</text>
+  <g transform="translate(24, 30)">
+    <circle cx="10" cy="10" r="10" fill="#0284C7" />
+    <path d="M 6 10 L 9 13 L 14 7" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" />
+    <text x="28" y="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#F8FAFC">VoxFlow Multi-Tenant Trust &amp; Isolation Boundaries</text>
+    <text x="28" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Exact-DID Inbound Routing, HMAC Signed Bridge &amp; Zero Cross-Tenant Data Leakage</text>
   </g>
 
-  <!-- Group: Untrusted Public Internet & Ingress Edge Layer -->
-  <rect x="30" y="85" width="900" height="100" rx="12" fill="#0F172A" stroke="#0284C7" stroke-width="1.2" stroke-dasharray="4,4" />
-  <text x="46" y="105" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#38BDF8" letter-spacing="0.5">UNTRUSTED PUBLIC INTERNET & INGRESS EDGE LAYER</text>
+  <!-- Group: UNTRUSTED PUBLIC INTERNET &amp; INGRESS EDGE LAYER -->
+  <rect x="24" y="68" width="912" height="78" rx="10" fill="#0F172A" stroke="#0284C7" stroke-width="1.2" stroke-dasharray="3,3" />
+  <text x="38" y="86" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700" fill="#38BDF8" letter-spacing="0.5">UNTRUSTED PUBLIC INTERNET &amp; INGRESS EDGE LAYER</text>
 
   <!-- Node: Inbound PSTN Caller -->
-  <g filter="url(#shadow)">
-    <rect x="50" y="110" width="240" height="60" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="1.8" />
+  <g>
+    <rect x="38" y="88" width="260" height="48" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="1.6" />
     
-    <rect x="215" y="118" width="65" height="18" rx="9" fill="#38BDF8" fill-opacity="0.2" stroke="#38BDF8" stroke-width="1" />
-    <text x="247.5" y="130" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#38BDF8" text-anchor="middle">PSTN</text>
-    <text x="66" y="134" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">Inbound PSTN Caller</text>
-    <text x="66" y="154" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Calls Depot UK DID (+44 20...)</text>
+    <rect x="233" y="95" width="55" height="16" rx="8" fill="#38BDF8" fill-opacity="0.2" stroke="#38BDF8" stroke-width="1" />
+    <text x="260.5" y="106.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#38BDF8" text-anchor="middle">PSTN</text>
+    <text x="52" y="107" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">Inbound PSTN Caller</text>
+    <text x="52" y="123" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="52" dy="0">Calls Depot UK DID (+44 20...)</tspan></text>
   </g>
   <!-- Node: AWS Lambda Bridge -->
-  <g filter="url(#shadow)">
-    <rect x="350" y="110" width="260" height="60" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.8" />
+  <g>
+    <rect x="348" y="88" width="270" height="48" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.6" />
     
-    <rect x="535" y="118" width="65" height="18" rx="9" fill="#F59E0B" fill-opacity="0.2" stroke="#F59E0B" stroke-width="1" />
-    <text x="567.5" y="130" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#F59E0B" text-anchor="middle">HMAC</text>
-    <text x="366" y="134" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">AWS Lambda Bridge</text>
-    <text x="366" y="154" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">HMAC-SHA256 turn authentication</text>
+    <rect x="553" y="95" width="55" height="16" rx="8" fill="#F59E0B" fill-opacity="0.2" stroke="#F59E0B" stroke-width="1" />
+    <text x="580.5" y="106.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#F59E0B" text-anchor="middle">HMAC</text>
+    <text x="362" y="107" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">AWS Lambda Bridge</text>
+    <text x="362" y="123" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="362" dy="0">HMAC-SHA256 turn authentication</tspan></text>
   </g>
   <!-- Node: Exact-DID Route Gate -->
-  <g filter="url(#shadow)">
-    <rect x="670" y="110" width="240" height="60" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.8" />
+  <g>
+    <rect x="668" y="88" width="250" height="48" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.6" />
     
-    <rect x="835" y="118" width="65" height="18" rx="9" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1" />
-    <text x="867.5" y="130" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#10B981" text-anchor="middle">GATE</text>
-    <text x="686" y="134" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">Exact-DID Route Gate</text>
-    <text x="686" y="154" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Strict tenant_id resolution
-Fail-close if unmatched</text>
+    <rect x="853" y="95" width="55" height="16" rx="8" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1" />
+    <text x="880.5" y="106.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#10B981" text-anchor="middle">GATE</text>
+    <text x="682" y="107" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">Exact-DID Route Gate</text>
+    <text x="682" y="123" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="682" dy="0">Strict tenant_id resolution</tspan></text>
   </g>
-  <path d="M 290 140 L 350 140" stroke="#38BDF8" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+  <path d="M 298 112 L 348 112" stroke="#38BDF8" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="279.5" y="130.0" width="81.0" height="20" rx="6" fill="#0B132B" stroke="#38BDF8" stroke-width="1" />
-    <text x="320.0" y="143.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Voice Call</text>
-  <path d="M 610 140 L 670 140" stroke="#F59E0B" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="286.0" y="103.0" width="74" height="18" rx="5" fill="#0B132B" stroke="#38BDF8" stroke-width="0.9" />
+    <text x="323.0" y="115.0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Voice Call</text>
+  <path d="M 618 112 L 668 112" stroke="#F59E0B" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="596.25" y="130.0" width="87.5" height="20" rx="6" fill="#0B132B" stroke="#F59E0B" stroke-width="1" />
-    <text x="640.0" y="143.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Signed Turn</text>
-  <!-- Group: Tenant A Isolation Boundary (Apex Depot) -->
-  <rect x="30" y="210" width="430" height="305" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.2" stroke-dasharray="4,4" />
-  <text x="46" y="230" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#34D399" letter-spacing="0.5">TENANT A ISOLATION BOUNDARY (APEX DEPOT)</text>
+    <rect x="603.0" y="103.0" width="80" height="18" rx="5" fill="#0B132B" stroke="#F59E0B" stroke-width="0.9" />
+    <text x="643.0" y="115.0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Signed Turn</text>
+  <!-- Group: TENANT A BOUNDARY (APEX DEPOT) -->
+  <rect x="24" y="168" width="435" height="235" rx="10" fill="#0F172A" stroke="#10B981" stroke-width="1.2" stroke-dasharray="3,3" />
+  <text x="38" y="186" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700" fill="#34D399" letter-spacing="0.5">TENANT A BOUNDARY (APEX DEPOT)</text>
 
-  <!-- Node: Session A (tenant_id = 'apex-depot') -->
-  <g filter="url(#shadow)">
-    <rect x="50" y="245" width="390" height="65" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.8" />
+  <!-- Node: Session A (tenant_id = &#x27;apex-depot&#x27;) -->
+  <g>
+    <rect x="38" y="196" width="405" height="54" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.6" />
     
-    <rect x="365" y="253" width="65" height="18" rx="9" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1" />
-    <text x="397.5" y="265" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#10B981" text-anchor="middle">SESSION A</text>
-    <text x="66" y="269" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">Session A (tenant_id = 'apex-depot')</text>
-    <text x="66" y="289" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Scoped caller identity & PIN binding</text>
+    <rect x="356" y="203" width="77" height="16" rx="8" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1" />
+    <text x="394.5" y="214.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#10B981" text-anchor="middle">SESSION A</text>
+    <text x="52" y="215" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">Session A (tenant_id = &#x27;apex-depot&#x27;)</text>
+    <text x="52" y="231" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="52" dy="0">Scoped caller identity &amp; PIN binding</tspan></text>
   </g>
   <!-- Node: Scoped Tool Execution A -->
-  <g filter="url(#shadow)">
-    <rect x="50" y="330" width="390" height="75" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.8" />
+  <g>
+    <rect x="38" y="266" width="405" height="62" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.6" />
     
-    <rect x="365" y="338" width="65" height="18" rx="9" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1" />
-    <text x="397.5" y="350" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#10B981" text-anchor="middle">TOOLS A</text>
-    <text x="66" y="354" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">Scoped Tool Execution A</text>
-    <text x="66" y="374" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Queries: WHERE tenant_id = 'apex-depot'
-Inventory, orders, slots strictly isolated</text>
+    <rect x="370" y="273" width="63" height="16" rx="8" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1" />
+    <text x="401.5" y="284.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#10B981" text-anchor="middle">TOOLS A</text>
+    <text x="52" y="288" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">Scoped Tool Execution A</text>
+    <text x="52" y="306" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="52" dy="0">Queries: WHERE tenant_id = &#x27;apex-depot&#x27;</tspan><tspan x="52" dy="14">Inventory, orders, slots strictly isolated</tspan></text>
   </g>
   <!-- Node: Tenant A Mirror (Google Sheets A) -->
-  <g filter="url(#shadow)">
-    <rect x="50" y="425" width="390" height="65" rx="10" fill="#1E293B" stroke="#14B8A6" stroke-width="1.8" />
+  <g>
+    <rect x="38" y="342" width="405" height="50" rx="8" fill="#1E293B" stroke="#14B8A6" stroke-width="1.6" />
     
-    <rect x="365" y="433" width="65" height="18" rx="9" fill="#14B8A6" fill-opacity="0.2" stroke="#14B8A6" stroke-width="1" />
-    <text x="397.5" y="445" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#14B8A6" text-anchor="middle">SHEETS A</text>
-    <text x="66" y="449" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">Tenant A Mirror (Google Sheets A)</text>
-    <text x="66" y="469" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Dedicated tenant spreadsheet writeback</text>
+    <rect x="363" y="349" width="70" height="16" rx="8" fill="#14B8A6" fill-opacity="0.2" stroke="#14B8A6" stroke-width="1" />
+    <text x="398.0" y="360.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#14B8A6" text-anchor="middle">SHEETS A</text>
+    <text x="52" y="361" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">Tenant A Mirror (Google Sheets A)</text>
+    <text x="52" y="377" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="52" dy="0">Dedicated spreadsheet writeback</tspan></text>
   </g>
-  <!-- Group: Tenant B Isolation Boundary (Beacon Depot) -->
-  <rect x="500" y="210" width="430" height="305" rx="12" fill="#0F172A" stroke="#818CF8" stroke-width="1.2" stroke-dasharray="4,4" />
-  <text x="516" y="230" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#818CF8" letter-spacing="0.5">TENANT B ISOLATION BOUNDARY (BEACON DEPOT)</text>
+  <!-- Group: TENANT B BOUNDARY (BEACON DEPOT) -->
+  <rect x="501" y="168" width="435" height="235" rx="10" fill="#0F172A" stroke="#818CF8" stroke-width="1.2" stroke-dasharray="3,3" />
+  <text x="515" y="186" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700" fill="#818CF8" letter-spacing="0.5">TENANT B BOUNDARY (BEACON DEPOT)</text>
 
-  <!-- Node: Session B (tenant_id = 'beacon-depot') -->
-  <g filter="url(#shadow)">
-    <rect x="520" y="245" width="390" height="65" rx="10" fill="#1E293B" stroke="#818CF8" stroke-width="1.8" />
+  <!-- Node: Session B (tenant_id = &#x27;beacon-depot&#x27;) -->
+  <g>
+    <rect x="515" y="196" width="405" height="54" rx="8" fill="#1E293B" stroke="#818CF8" stroke-width="1.6" />
     
-    <rect x="835" y="253" width="65" height="18" rx="9" fill="#818CF8" fill-opacity="0.2" stroke="#818CF8" stroke-width="1" />
-    <text x="867.5" y="265" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#818CF8" text-anchor="middle">SESSION B</text>
-    <text x="536" y="269" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">Session B (tenant_id = 'beacon-depot')</text>
-    <text x="536" y="289" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Scoped caller identity & PIN binding</text>
+    <rect x="833" y="203" width="77" height="16" rx="8" fill="#818CF8" fill-opacity="0.2" stroke="#818CF8" stroke-width="1" />
+    <text x="871.5" y="214.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#818CF8" text-anchor="middle">SESSION B</text>
+    <text x="529" y="215" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">Session B (tenant_id = &#x27;beacon-depot&#x27;)</text>
+    <text x="529" y="231" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="529" dy="0">Scoped caller identity &amp; PIN binding</tspan></text>
   </g>
   <!-- Node: Scoped Tool Execution B -->
-  <g filter="url(#shadow)">
-    <rect x="520" y="330" width="390" height="75" rx="10" fill="#1E293B" stroke="#818CF8" stroke-width="1.8" />
+  <g>
+    <rect x="515" y="266" width="405" height="62" rx="8" fill="#1E293B" stroke="#818CF8" stroke-width="1.6" />
     
-    <rect x="835" y="338" width="65" height="18" rx="9" fill="#818CF8" fill-opacity="0.2" stroke="#818CF8" stroke-width="1" />
-    <text x="867.5" y="350" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#818CF8" text-anchor="middle">TOOLS B</text>
-    <text x="536" y="354" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">Scoped Tool Execution B</text>
-    <text x="536" y="374" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Queries: WHERE tenant_id = 'beacon-depot'
-Inventory, orders, slots strictly isolated</text>
+    <rect x="847" y="273" width="63" height="16" rx="8" fill="#818CF8" fill-opacity="0.2" stroke="#818CF8" stroke-width="1" />
+    <text x="878.5" y="284.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#818CF8" text-anchor="middle">TOOLS B</text>
+    <text x="529" y="288" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">Scoped Tool Execution B</text>
+    <text x="529" y="306" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="529" dy="0">Queries: WHERE tenant_id = &#x27;beacon-depot&#x27;</tspan><tspan x="529" dy="14">Inventory, orders, slots strictly isolated</tspan></text>
   </g>
   <!-- Node: Tenant B Mirror (Google Sheets B) -->
-  <g filter="url(#shadow)">
-    <rect x="520" y="425" width="390" height="65" rx="10" fill="#1E293B" stroke="#818CF8" stroke-width="1.8" />
+  <g>
+    <rect x="515" y="342" width="405" height="50" rx="8" fill="#1E293B" stroke="#818CF8" stroke-width="1.6" />
     
-    <rect x="835" y="433" width="65" height="18" rx="9" fill="#818CF8" fill-opacity="0.2" stroke="#818CF8" stroke-width="1" />
-    <text x="867.5" y="445" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#818CF8" text-anchor="middle">SHEETS B</text>
-    <text x="536" y="449" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">Tenant B Mirror (Google Sheets B)</text>
-    <text x="536" y="469" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Dedicated tenant spreadsheet writeback</text>
+    <rect x="840" y="349" width="70" height="16" rx="8" fill="#818CF8" fill-opacity="0.2" stroke="#818CF8" stroke-width="1" />
+    <text x="875.0" y="360.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#818CF8" text-anchor="middle">SHEETS B</text>
+    <text x="529" y="361" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">Tenant B Mirror (Google Sheets B)</text>
+    <text x="529" y="377" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="529" dy="0">Dedicated spreadsheet writeback</tspan></text>
   </g>
-  <path d="M 730 170 C 730 220, 245 220, 245 245" stroke="#10B981" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+  <path d="M 725 136 C 725 170, 240 170, 240 196" stroke="#10B981" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="396.5" y="195" width="107.0" height="20" rx="6" fill="#0B132B" stroke="#10B981" stroke-width="1" />
-    <text x="450" y="208.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Route to DID A</text>
-  <path d="M 850 170 C 850 220, 715 220, 715 245" stroke="#818CF8" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="401.0" y="157" width="98" height="18" rx="5" fill="#0B132B" stroke="#10B981" stroke-width="0.9" />
+    <text x="450" y="169" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Route to DID A</text>
+  <path d="M 860 136 C 860 170, 717 170, 717 196" stroke="#818CF8" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="736.5" y="195" width="107.0" height="20" rx="6" fill="#0B132B" stroke="#818CF8" stroke-width="1" />
-    <text x="790" y="208.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Route to DID B</text>
-  <path d="M 245 310 L 245 330" stroke="#10B981" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="741.0" y="157" width="98" height="18" rx="5" fill="#0B132B" stroke="#818CF8" stroke-width="0.9" />
+    <text x="790" y="169" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Route to DID B</text>
+  <path d="M 240 250 L 240 266" stroke="#10B981" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="214.25" y="310.0" width="61.5" height="20" rx="6" fill="#0B132B" stroke="#10B981" stroke-width="1" />
-    <text x="245.0" y="323.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Execute</text>
-  <path d="M 245 405 L 245 425" stroke="#14B8A6" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="212.0" y="249.0" width="56" height="18" rx="5" fill="#0B132B" stroke="#10B981" stroke-width="0.9" />
+    <text x="240.0" y="261.0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Execute</text>
+  <path d="M 240 328 L 240 342" stroke="#14B8A6" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="217.5" y="405.0" width="55.0" height="20" rx="6" fill="#0B132B" stroke="#14B8A6" stroke-width="1" />
-    <text x="245.0" y="418.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Mirror</text>
-  <path d="M 715 310 L 715 330" stroke="#818CF8" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="215.0" y="326.0" width="50" height="18" rx="5" fill="#0B132B" stroke="#14B8A6" stroke-width="0.9" />
+    <text x="240.0" y="338.0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Mirror</text>
+  <path d="M 717 250 L 717 266" stroke="#818CF8" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="684.25" y="310.0" width="61.5" height="20" rx="6" fill="#0B132B" stroke="#818CF8" stroke-width="1" />
-    <text x="715.0" y="323.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Execute</text>
-  <path d="M 715 405 L 715 425" stroke="#818CF8" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="689.0" y="249.0" width="56" height="18" rx="5" fill="#0B132B" stroke="#818CF8" stroke-width="0.9" />
+    <text x="717.0" y="261.0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Execute</text>
+  <path d="M 717 328 L 717 342" stroke="#818CF8" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="687.5" y="405.0" width="55.0" height="20" rx="6" fill="#0B132B" stroke="#818CF8" stroke-width="1" />
-    <text x="715.0" y="418.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Mirror</text>
-  <line x1="480" y1="210" x2="480" y2="515" stroke="#F43F5E" stroke-width="2" stroke-dasharray="6,4" />
-  <rect x="420" y="345" width="120" height="24" rx="12" fill="#0B132B" stroke="#F43F5E" stroke-width="1.5" />
-  <text x="480" y="361" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#F87171" text-anchor="middle">NO CROSS-LEAK</text>
+    <rect x="692.0" y="326.0" width="50" height="18" rx="5" fill="#0B132B" stroke="#818CF8" stroke-width="0.9" />
+    <text x="717.0" y="338.0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Mirror</text>
+  <line x1="480" y1="168" x2="480" y2="403" stroke="#F43F5E" stroke-width="2" stroke-dasharray="5,3" />
+  <rect x="425" y="275" width="110" height="22" rx="11" fill="#0B132B" stroke="#F43F5E" stroke-width="1.2" />
+  <text x="480" y="289.5" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#F87171" text-anchor="middle">NO CROSS-LEAK</text>
 </svg>

@@ -12,6 +12,9 @@ credentials, customer identifiers, or production configuration.
 
 ![Voice Pipeline Architecture](diagrams/01-voice-pipeline.svg)
 
+<details>
+<summary><b>🔍 View Mermaid System Context Specification</b></summary>
+
 ```mermaid
 flowchart LR
     Caller["PSTN Caller\n(UK DID)"] --> Connect["Amazon Connect\n(eu-west-2)"]
@@ -35,6 +38,8 @@ flowchart LR
     style JobLedger fill:#334155,stroke:#94A3B8,stroke-width:2px,color:#F8FAFC
     style Browser fill:#1E293B,stroke:#64748B,stroke-width:2px,color:#F8FAFC
 ```
+
+</details>
 
 Two ingress paths share one turn engine:
 

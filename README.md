@@ -80,6 +80,9 @@ In high-velocity supply chain operations, an ungrounded or hallucinated voice an
 
 ![VoxFlow Voice Pipeline Architecture](diagrams/01-voice-pipeline.svg)
 
+<details>
+<summary><b>🔍 View Raw Mermaid Diagram Specification</b></summary>
+
 ```mermaid
 flowchart TB
     subgraph Telephony["📞 Inbound Telephony Layer (London eu-west-2)"]
@@ -117,6 +120,8 @@ flowchart TB
     style Persistence fill:#1C1917,stroke:#F59E0B,stroke-width:2px,color:#F8FAFC
 ```
 
+</details>
+
 ### Architectural Highlights
 1. **Decoupled Telephony and Audio**: The backend API never handles raw PSTN audio. Amazon Connect and Lex V2 capture speech in AWS London (`eu-west-2`), produce a transcript turn, and invoke the signed Lambda bridge. The API receives only signed JSON and returns clean text for neural TTS playback.
 2. **Replay-Resistant Turns**: The Lambda bridge signs `timestamp:path:body` with a shared HMAC-SHA256 secret. The API verifies the signature against a 60-second freshness window and registers it in Redis via `SET NX EX 300` to prevent replay attacks.
@@ -128,7 +133,10 @@ Detailed documentation: [ARCHITECTURE.md](ARCHITECTURE.md) · [CALL-FLOW.md](CAL
 
 ## 🔄 Conversation State Machine & Decision Gates
 
-![Call State Machine](diagrams/02-state-machine.svg)
+![VoxFlow Voice Call State Machine](diagrams/02-state-machine.svg)
+
+<details>
+<summary><b>🔍 View Raw Mermaid Diagram Specification</b></summary>
 
 ```mermaid
 flowchart TD
@@ -175,6 +183,8 @@ flowchart TD
     style EscalateScript fill:#4C0519,stroke:#F43F5E,stroke-width:2px,color:#F8FAFC
     style EscalateHuman fill:#4C0519,stroke:#F43F5E,stroke-width:2px,color:#F8FAFC
 ```
+
+</details>
 
 ### State Machine Safety Invariants
 - **Identity Precedes Data**: No purchase order details, stock counts, or shipment tracking information can be queried before account identity is established.

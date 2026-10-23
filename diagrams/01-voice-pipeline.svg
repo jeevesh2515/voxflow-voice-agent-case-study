@@ -1,17 +1,11 @@
-<svg width="100%" height="100%" viewBox="0 0 960 520" xmlns="http://www.w3.org/2000/svg">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" width="960" height="440">
   <defs>
     <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#0284C7" />
       <stop offset="50%" stop-color="#6366F1" />
       <stop offset="100%" stop-color="#10B981" />
     </linearGradient>
-    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1E293B" />
-      <stop offset="100%" stop-color="#0F172A" />
-    </linearGradient>
-    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.35" />
-    </filter>
     <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M 0 1 L 9 5 L 0 9 z" fill="#38BDF8" />
     </marker>
@@ -27,182 +21,178 @@
   </defs>
 
   <!-- Container Canvas -->
-  <rect x="2" y="2" width="956" height="516" rx="14" fill="#0B132B" stroke="#334155" stroke-width="2" />
-  <rect x="2" y="2" width="956" height="6" rx="3" fill="url(#headerGrad)" />
+  <rect x="2" y="2" width="956" height="436" rx="12" fill="#0B132B" stroke="#334155" stroke-width="2" />
+  <rect x="2" y="2" width="956" height="5" rx="2" fill="url(#headerGrad)" />
 
   <!-- Header Section -->
-  <g transform="translate(30, 36)">
-    <circle cx="12" cy="12" r="12" fill="#0284C7" />
-    <path d="M 7 12 L 11 16 L 17 8" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" />
-    <text x="34" y="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#F8FAFC">VoxFlow Voice Pipeline Architecture</text>
-    <text x="34" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Inbound PSTN via Amazon Connect & Browser Audio Simulator Paths (London eu-west-2)</text>
+  <g transform="translate(24, 30)">
+    <circle cx="10" cy="10" r="10" fill="#0284C7" />
+    <path d="M 6 10 L 9 13 L 14 7" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" />
+    <text x="28" y="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#F8FAFC">VoxFlow Voice Pipeline Architecture</text>
+    <text x="28" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Inbound PSTN via Amazon Connect &amp; Browser Audio Simulator Paths (London eu-west-2)</text>
   </g>
 
-  <!-- Group: 1. Inbound Telephony Layer -->
-  <rect x="30" y="80" width="260" height="410" rx="12" fill="#0F172A" stroke="#0284C7" stroke-width="1.2" stroke-dasharray="4,4" />
-  <text x="46" y="100" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#38BDF8" letter-spacing="0.5">1. INBOUND TELEPHONY LAYER</text>
+  <!-- Group: 1. INBOUND TELEPHONY LAYER -->
+  <rect x="24" y="68" width="270" height="350" rx="10" fill="#0F172A" stroke="#0284C7" stroke-width="1.2" stroke-dasharray="3,3" />
+  <text x="38" y="86" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700" fill="#38BDF8" letter-spacing="0.5">1. INBOUND TELEPHONY LAYER</text>
 
-  <!-- Group: 2. Security & Agent Gateway -->
-  <rect x="310" y="80" width="310" height="410" rx="12" fill="#0F172A" stroke="#6366F1" stroke-width="1.2" stroke-dasharray="4,4" />
-  <text x="326" y="100" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#818CF8" letter-spacing="0.5">2. SECURITY & AGENT GATEWAY</text>
+  <!-- Group: 2. SECURITY &amp; AGENT GATEWAY -->
+  <rect x="310" y="68" width="310" height="350" rx="10" fill="#0F172A" stroke="#6366F1" stroke-width="1.2" stroke-dasharray="3,3" />
+  <text x="324" y="86" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700" fill="#818CF8" letter-spacing="0.5">2. SECURITY &amp; AGENT GATEWAY</text>
 
-  <!-- Group: 3. Intelligence & Persistence -->
-  <rect x="640" y="80" width="290" height="410" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.2" stroke-dasharray="4,4" />
-  <text x="656" y="100" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#34D399" letter-spacing="0.5">3. INTELLIGENCE & PERSISTENCE</text>
+  <!-- Group: 3. INTELLIGENCE &amp; PERSISTENCE -->
+  <rect x="636" y="68" width="300" height="350" rx="10" fill="#0F172A" stroke="#10B981" stroke-width="1.2" stroke-dasharray="3,3" />
+  <text x="650" y="86" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700" fill="#34D399" letter-spacing="0.5">3. INTELLIGENCE &amp; PERSISTENCE</text>
 
   <!-- Node: PSTN Caller (UK) -->
-  <g filter="url(#shadow)">
-    <rect x="50" y="115" width="220" height="60" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="1.8" />
+  <g>
+    <rect x="38" y="98" width="242" height="58" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="1.6" />
     
-    <rect x="195" y="123" width="65" height="18" rx="9" fill="#38BDF8" fill-opacity="0.2" stroke="#38BDF8" stroke-width="1" />
-    <text x="227.5" y="135" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#38BDF8" text-anchor="middle">PSTN</text>
-    <text x="66" y="139" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">PSTN Caller (UK)</text>
-    <text x="66" y="159" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Supplier / driver on UK DID</text>
+    <rect x="215" y="105" width="55" height="16" rx="8" fill="#38BDF8" fill-opacity="0.2" stroke="#38BDF8" stroke-width="1" />
+    <text x="242.5" y="116.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#38BDF8" text-anchor="middle">PSTN</text>
+    <text x="52" y="120" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">PSTN Caller (UK)</text>
+    <text x="52" y="138" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="52" dy="0">Supplier / driver on UK DID</tspan></text>
   </g>
   <!-- Node: Amazon Connect -->
-  <g filter="url(#shadow)">
-    <rect x="50" y="215" width="220" height="65" rx="10" fill="#1E293B" stroke="#0284C7" stroke-width="1.8" />
+  <g>
+    <rect x="38" y="178" width="242" height="60" rx="8" fill="#1E293B" stroke="#0284C7" stroke-width="1.6" />
     
-    <rect x="195" y="223" width="65" height="18" rx="9" fill="#0284C7" fill-opacity="0.2" stroke="#0284C7" stroke-width="1" />
-    <text x="227.5" y="235" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#0284C7" text-anchor="middle">AWS</text>
-    <text x="66" y="239" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">Amazon Connect</text>
-    <text x="66" y="259" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Contact flow · en-GB · eu-west-2</text>
+    <rect x="215" y="185" width="55" height="16" rx="8" fill="#0284C7" fill-opacity="0.2" stroke="#0284C7" stroke-width="1" />
+    <text x="242.5" y="196.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#0284C7" text-anchor="middle">AWS</text>
+    <text x="52" y="200" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">Amazon Connect</text>
+    <text x="52" y="218" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="52" dy="0">Contact flow · en-GB · eu-west-2</tspan></text>
   </g>
   <!-- Node: Amazon Lex V2 -->
-  <g filter="url(#shadow)">
-    <rect x="50" y="315" width="220" height="60" rx="10" fill="#1E293B" stroke="#0EA5E9" stroke-width="1.8" />
+  <g>
+    <rect x="38" y="260" width="242" height="58" rx="8" fill="#1E293B" stroke="#0EA5E9" stroke-width="1.6" />
     
-    <rect x="195" y="323" width="65" height="18" rx="9" fill="#0EA5E9" fill-opacity="0.2" stroke="#0EA5E9" stroke-width="1" />
-    <text x="227.5" y="335" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#0EA5E9" text-anchor="middle">STT</text>
-    <text x="66" y="339" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">Amazon Lex V2</text>
-    <text x="66" y="359" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">en-GB Speech Recognition (STT)</text>
+    <rect x="215" y="267" width="55" height="16" rx="8" fill="#0EA5E9" fill-opacity="0.2" stroke="#0EA5E9" stroke-width="1" />
+    <text x="242.5" y="278.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#0EA5E9" text-anchor="middle">STT</text>
+    <text x="52" y="282" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">Amazon Lex V2</text>
+    <text x="52" y="300" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="52" dy="0">en-GB Speech Capture (STT)</tspan></text>
   </g>
   <!-- Node: Browser Simulator -->
-  <g filter="url(#shadow)">
-    <rect x="50" y="415" width="220" height="60" rx="10" fill="#1E293B" stroke="#64748B" stroke-width="1.8" />
+  <g>
+    <rect x="38" y="340" width="242" height="58" rx="8" fill="#1E293B" stroke="#64748B" stroke-width="1.6" />
     
-    <rect x="195" y="423" width="65" height="18" rx="9" fill="#64748B" fill-opacity="0.2" stroke="#64748B" stroke-width="1" />
-    <text x="227.5" y="435" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#64748B" text-anchor="middle">TEST</text>
-    <text x="66" y="439" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">Browser Simulator</text>
-    <text x="66" y="459" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">PCM 16 kHz Web Audio client</text>
+    <rect x="215" y="347" width="55" height="16" rx="8" fill="#64748B" fill-opacity="0.2" stroke="#64748B" stroke-width="1" />
+    <text x="242.5" y="358.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#64748B" text-anchor="middle">TEST</text>
+    <text x="52" y="362" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">Browser Simulator</text>
+    <text x="52" y="380" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="52" dy="0">PCM 16 kHz Web Audio client</tspan></text>
   </g>
   <!-- Node: AWS Lambda Bridge -->
-  <g filter="url(#shadow)">
-    <rect x="330" y="115" width="270" height="70" rx="10" fill="#1E293B" stroke="#F59E0B" stroke-width="1.8" />
+  <g>
+    <rect x="326" y="98" width="278" height="62" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.6" />
     
-    <rect x="525" y="123" width="65" height="18" rx="9" fill="#F59E0B" fill-opacity="0.2" stroke="#F59E0B" stroke-width="1" />
-    <text x="557.5" y="135" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#F59E0B" text-anchor="middle">AUTH</text>
-    <text x="346" y="139" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">AWS Lambda Bridge</text>
-    <text x="346" y="159" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">HMAC-SHA256 signature + timestamp</text>
+    <rect x="539" y="105" width="55" height="16" rx="8" fill="#F59E0B" fill-opacity="0.2" stroke="#F59E0B" stroke-width="1" />
+    <text x="566.5" y="116.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#F59E0B" text-anchor="middle">AUTH</text>
+    <text x="340" y="120" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">AWS Lambda Bridge</text>
+    <text x="340" y="138" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="340" dy="0">HMAC-SHA256 signature + timestamp</tspan></text>
   </g>
-  <!-- Node: Replay Ledger & Route Gate -->
-  <g filter="url(#shadow)">
-    <rect x="330" y="220" width="270" height="70" rx="10" fill="#1E293B" stroke="#818CF8" stroke-width="1.8" />
+  <!-- Node: Replay Ledger &amp; Route Gate -->
+  <g>
+    <rect x="326" y="180" width="278" height="62" rx="8" fill="#1E293B" stroke="#818CF8" stroke-width="1.6" />
     
-    <rect x="525" y="228" width="65" height="18" rx="9" fill="#818CF8" fill-opacity="0.2" stroke="#818CF8" stroke-width="1" />
-    <text x="557.5" y="240" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#818CF8" text-anchor="middle">GUARD</text>
-    <text x="346" y="244" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">Replay Ledger & Route Gate</text>
-    <text x="346" y="264" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Redis SET NX EX 300s · Exact DID match</text>
+    <rect x="539" y="187" width="55" height="16" rx="8" fill="#818CF8" fill-opacity="0.2" stroke="#818CF8" stroke-width="1" />
+    <text x="566.5" y="198.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#818CF8" text-anchor="middle">GUARD</text>
+    <text x="340" y="202" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">Replay Ledger &amp; Route Gate</text>
+    <text x="340" y="220" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="340" dy="0">Redis SET NX EX 300s · Exact DID match</tspan></text>
   </g>
   <!-- Node: FastAPI Voice Engine -->
-  <g filter="url(#shadow)">
-    <rect x="330" y="325" width="270" height="70" rx="10" fill="#1E293B" stroke="#6366F1" stroke-width="1.8" />
+  <g>
+    <rect x="326" y="262" width="278" height="62" rx="8" fill="#1E293B" stroke="#6366F1" stroke-width="1.6" />
     
-    <rect x="525" y="333" width="65" height="18" rx="9" fill="#6366F1" fill-opacity="0.2" stroke="#6366F1" stroke-width="1" />
-    <text x="557.5" y="345" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#6366F1" text-anchor="middle">CORE</text>
-    <text x="346" y="349" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">FastAPI Voice Engine</text>
-    <text x="346" y="369" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">AgentRunner · Session state machine</text>
+    <rect x="539" y="269" width="55" height="16" rx="8" fill="#6366F1" fill-opacity="0.2" stroke="#6366F1" stroke-width="1" />
+    <text x="566.5" y="280.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#6366F1" text-anchor="middle">CORE</text>
+    <text x="340" y="284" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">FastAPI Voice Engine</text>
+    <text x="340" y="302" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="340" dy="0">AgentRunner · Session state machine</tspan></text>
   </g>
   <!-- Node: Spoken Grounding Guard -->
-  <g filter="url(#shadow)">
-    <rect x="330" y="420" width="270" height="55" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.8" />
+  <g>
+    <rect x="326" y="344" width="278" height="54" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.6" />
     
-    <rect x="525" y="428" width="65" height="18" rx="9" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1" />
-    <text x="557.5" y="440" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#10B981" text-anchor="middle">SAFETY</text>
-    <text x="346" y="444" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">Spoken Grounding Guard</text>
-    <text x="346" y="464" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Refuses unbacked status claims</text>
+    <rect x="538" y="351" width="56" height="16" rx="8" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1" />
+    <text x="566.0" y="362.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#10B981" text-anchor="middle">SAFETY</text>
+    <text x="340" y="363" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">Spoken Grounding Guard</text>
+    <text x="340" y="379" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="340" dy="0">Refuses unbacked status claims</tspan></text>
   </g>
   <!-- Node: Groq Cloud LLM / STT -->
-  <g filter="url(#shadow)">
-    <rect x="660" y="115" width="250" height="65" rx="10" fill="#1E293B" stroke="#A855F7" stroke-width="1.8" />
+  <g>
+    <rect x="652" y="98" width="268" height="60" rx="8" fill="#1E293B" stroke="#A855F7" stroke-width="1.6" />
     
-    <rect x="835" y="123" width="65" height="18" rx="9" fill="#A855F7" fill-opacity="0.2" stroke="#A855F7" stroke-width="1" />
-    <text x="867.5" y="135" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#A855F7" text-anchor="middle">AI</text>
-    <text x="676" y="139" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">Groq Cloud LLM / STT</text>
-    <text x="676" y="159" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">gpt-oss-20b · Whisper-large-v3</text>
+    <rect x="855" y="105" width="55" height="16" rx="8" fill="#A855F7" fill-opacity="0.2" stroke="#A855F7" stroke-width="1" />
+    <text x="882.5" y="116.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#A855F7" text-anchor="middle">AI</text>
+    <text x="666" y="120" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">Groq Cloud LLM / STT</text>
+    <text x="666" y="138" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="666" dy="0">gpt-oss-20b · Whisper-large-v3</tspan></text>
   </g>
   <!-- Node: Tenant PostgreSQL -->
-  <g filter="url(#shadow)">
-    <rect x="660" y="215" width="250" height="65" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.8" />
+  <g>
+    <rect x="652" y="178" width="268" height="60" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1.6" />
     
-    <rect x="835" y="223" width="65" height="18" rx="9" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1" />
-    <text x="867.5" y="235" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#10B981" text-anchor="middle">DB</text>
-    <text x="676" y="239" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">Tenant PostgreSQL</text>
-    <text x="676" y="259" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Calls, logs, PBKDF2 PINs, orders</text>
+    <rect x="855" y="185" width="55" height="16" rx="8" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1" />
+    <text x="882.5" y="196.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#10B981" text-anchor="middle">DB</text>
+    <text x="666" y="200" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">Tenant PostgreSQL</text>
+    <text x="666" y="218" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="666" dy="0">Calls, logs, PBKDF2 PINs, orders</tspan></text>
   </g>
   <!-- Node: Google Sheets Worker -->
-  <g filter="url(#shadow)">
-    <rect x="660" y="315" width="250" height="65" rx="10" fill="#1E293B" stroke="#14B8A6" stroke-width="1.8" />
+  <g>
+    <rect x="652" y="260" width="268" height="60" rx="8" fill="#1E293B" stroke="#14B8A6" stroke-width="1.6" />
     
-    <rect x="835" y="323" width="65" height="18" rx="9" fill="#14B8A6" fill-opacity="0.2" stroke="#14B8A6" stroke-width="1" />
-    <text x="867.5" y="335" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#14B8A6" text-anchor="middle">SYNC</text>
-    <text x="676" y="339" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">Google Sheets Worker</text>
-    <text x="676" y="359" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Idempotent writeback mirror</text>
+    <rect x="855" y="267" width="55" height="16" rx="8" fill="#14B8A6" fill-opacity="0.2" stroke="#14B8A6" stroke-width="1" />
+    <text x="882.5" y="278.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#14B8A6" text-anchor="middle">SYNC</text>
+    <text x="666" y="282" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">Google Sheets Worker</text>
+    <text x="666" y="300" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="666" dy="0">Idempotent writeback mirror</tspan></text>
   </g>
   <!-- Node: Amazon Polly / Edge TTS -->
-  <g filter="url(#shadow)">
-    <rect x="660" y="415" width="250" height="65" rx="10" fill="#1E293B" stroke="#F43F5E" stroke-width="1.8" />
+  <g>
+    <rect x="652" y="340" width="268" height="60" rx="8" fill="#1E293B" stroke="#F43F5E" stroke-width="1.6" />
     
-    <rect x="835" y="423" width="65" height="18" rx="9" fill="#F43F5E" fill-opacity="0.2" stroke="#F43F5E" stroke-width="1" />
-    <text x="867.5" y="435" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#F43F5E" text-anchor="middle">TTS</text>
-    <text x="676" y="439" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#F8FAFC">Amazon Polly / Edge TTS</text>
-    <text x="676" y="459" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Neural en-GB voice synthesis</text>
+    <rect x="855" y="347" width="55" height="16" rx="8" fill="#F43F5E" fill-opacity="0.2" stroke="#F43F5E" stroke-width="1" />
+    <text x="882.5" y="358.5" font-family="system-ui, sans-serif" font-size="8.5" font-weight="700" fill="#F43F5E" text-anchor="middle">TTS</text>
+    <text x="666" y="362" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#F8FAFC">Amazon Polly / Edge TTS</text>
+    <text x="666" y="380" font-family="system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8"><tspan x="666" dy="0">Neural en-GB voice synthesis</tspan></text>
   </g>
-  <path d="M 160 175 L 160 215" stroke="#38BDF8" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+  <path d="M 159 156 L 159 178" stroke="#38BDF8" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="129.25" y="185.0" width="61.5" height="20" rx="6" fill="#0B132B" stroke="#38BDF8" stroke-width="1" />
-    <text x="160.0" y="198.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Inbound</text>
-  <path d="M 160 280 L 160 315" stroke="#0EA5E9" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="131.0" y="158.0" width="56" height="18" rx="5" fill="#0B132B" stroke="#38BDF8" stroke-width="0.9" />
+    <text x="159.0" y="170.0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Inbound</text>
+  <path d="M 159 238 L 159 260" stroke="#0EA5E9" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="129.25" y="287.5" width="61.5" height="20" rx="6" fill="#0B132B" stroke="#0EA5E9" stroke-width="1" />
-    <text x="160.0" y="301.0" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Capture</text>
-  <path d="M 270 345 C 300 345, 300 150, 330 150" stroke="#38BDF8" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="131.0" y="240.0" width="56" height="18" rx="5" fill="#0B132B" stroke="#0EA5E9" stroke-width="0.9" />
+    <text x="159.0" y="252.0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Capture</text>
+  <path d="M 280 289 C 305 289, 305 129, 326 129" stroke="#38BDF8" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="259.5" y="220" width="81.0" height="20" rx="6" fill="#0B132B" stroke="#38BDF8" stroke-width="1" />
-    <text x="300" y="233.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Transcript</text>
-  <path d="M 465 185 L 465 220" stroke="#F59E0B" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="268.0" y="196" width="74" height="18" rx="5" fill="#0B132B" stroke="#38BDF8" stroke-width="0.9" />
+    <text x="305" y="208" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Transcript</text>
+  <path d="M 465 160 L 465 180" stroke="#F59E0B" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="421.25" y="192.5" width="87.5" height="20" rx="6" fill="#0B132B" stroke="#F59E0B" stroke-width="1" />
-    <text x="465.0" y="206.0" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Signed Turn</text>
-  <path d="M 465 290 L 465 325" stroke="#818CF8" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="425.0" y="161.0" width="80" height="18" rx="5" fill="#0B132B" stroke="#F59E0B" stroke-width="0.9" />
+    <text x="465.0" y="173.0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Signed Turn</text>
+  <path d="M 465 242 L 465 262" stroke="#818CF8" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="431.0" y="297.5" width="68.0" height="20" rx="6" fill="#0B132B" stroke="#818CF8" stroke-width="1" />
-    <text x="465.0" y="311.0" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Verified</text>
-  <path d="M 465 395 L 465 420" stroke="#10B981" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="434.0" y="243.0" width="62" height="18" rx="5" fill="#0B132B" stroke="#818CF8" stroke-width="0.9" />
+    <text x="465.0" y="255.0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Verified</text>
+  <path d="M 465 324 L 465 344" stroke="#10B981" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="437.5" y="397.5" width="55.0" height="20" rx="6" fill="#0B132B" stroke="#10B981" stroke-width="1" />
-    <text x="465.0" y="411.0" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Filter</text>
-  <path d="M 600 345 L 660 150" stroke="#A855F7" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="440.0" y="325.0" width="50" height="18" rx="5" fill="#0B132B" stroke="#10B981" stroke-width="0.9" />
+    <text x="465.0" y="337.0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Filter</text>
+  <path d="M 604 280 L 652 128" stroke="#A855F7" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="583.0" y="237.5" width="94.0" height="20" rx="6" fill="#0B132B" stroke="#A855F7" stroke-width="1" />
-    <text x="630.0" y="251.0" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Prompt / STT</text>
-  <path d="M 600 360 L 660 250" stroke="#10B981" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="585.0" y="195.0" width="86" height="18" rx="5" fill="#0B132B" stroke="#A855F7" stroke-width="0.9" />
+    <text x="628.0" y="207.0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Prompt / STT</text>
+  <path d="M 604 295 L 652 208" stroke="#10B981" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="589.5" y="295.0" width="81.0" height="20" rx="6" fill="#0B132B" stroke="#10B981" stroke-width="1" />
-    <text x="630.0" y="308.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Tool Query</text>
-  <path d="M 785 280 L 785 315" stroke="#14B8A6" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="591.0" y="242.5" width="74" height="18" rx="5" fill="#0B132B" stroke="#10B981" stroke-width="0.9" />
+    <text x="628.0" y="254.5" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Tool Query</text>
+  <path d="M 786 238 L 786 260" stroke="#14B8A6" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="757.5" y="287.5" width="55.0" height="20" rx="6" fill="#0B132B" stroke="#14B8A6" stroke-width="1" />
-    <text x="785.0" y="301.0" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Mirror</text>
-  <path d="M 465 475 C 465 500, 785 500, 785 480" stroke="#10B981" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="761.0" y="240.0" width="50" height="18" rx="5" fill="#0B132B" stroke="#14B8A6" stroke-width="0.9" />
+    <text x="786.0" y="252.0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Mirror</text>
+  <path d="M 465 398 C 465 425, 786 425, 786 400" stroke="#10B981" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="561.75" y="490" width="126.5" height="20" rx="6" fill="#0B132B" stroke="#10B981" stroke-width="1" />
-    <text x="625" y="503.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Allow-listed text</text>
-  <path d="M 660 445 C 290 470, 280 260, 270 250" stroke="#F43F5E" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
+    <rect x="567.0" y="416" width="116" height="18" rx="5" fill="#0B132B" stroke="#10B981" stroke-width="0.9" />
+    <text x="625" y="428" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Allow-listed text</text>
+  <path d="M 652 370 C 290 410, 285 220, 280 208" stroke="#F43F5E" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
   
-    <rect x="243.0" y="290" width="94.0" height="20" rx="6" fill="#0B132B" stroke="#F43F5E" stroke-width="1" />
-    <text x="290" y="303.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Spoken Audio</text>
-  <path d="M 160 215 L 160 175" stroke="#F43F5E" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
-  
-    <rect x="100.0" y="185.0" width="120.0" height="20" rx="6" fill="#0B132B" stroke="#F43F5E" stroke-width="1" />
-    <text x="160.0" y="198.5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#F8FAFC" text-anchor="middle">Speech to Caller</text></svg>
+    <rect x="252.0" y="256" width="86" height="18" rx="5" fill="#0B132B" stroke="#F43F5E" stroke-width="0.9" />
+    <text x="295" y="268" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#F8FAFC" text-anchor="middle">Spoken Audio</text></svg>
