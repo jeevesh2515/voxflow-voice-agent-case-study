@@ -1,0 +1,12 @@
+%% VoxFlow — failure and escalation paths
+flowchart LR
+    Turn[Caller turn] --> Deadline{6 s turn deadline?}
+    Deadline -- exceeded --> Esc1[Escalate + honest script]
+    Deadline -- ok --> Tool{Tool result}
+    Tool -- timeout --> Esc1
+    Tool -- malformed --> Esc1
+    Tool -- refused/unverified --> Esc2[Refuse or ask again]
+    Tool -- valid --> Ground[Speak allow-listed fields only]
+    Ground --> Close[Close or continue]
+    Esc1 --> Ticket[Callback ticket / human queue]
+    Esc2 --> Close

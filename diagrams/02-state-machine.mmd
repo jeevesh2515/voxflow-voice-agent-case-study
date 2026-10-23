@@ -1,0 +1,29 @@
+%% VoxFlow — documented call state machine (public contract)
+stateDiagram-v2
+    [*] --> greeting
+    greeting --> identity_check: recording notice + ask for account factors
+    identity_check --> identity_check: factors missing / mismatch (max 2)
+    identity_check --> human_escalation: second mismatch
+    identity_check --> intent_detection: identity bound to account
+
+    intent_detection --> information_gathering: slot, status or reference missing
+    information_gathering --> intent_detection: args supplied
+    intent_detection --> policy_check: write or prohibited intent
+    intent_detection --> tool_execution: read intent with complete args
+    intent_detection --> human_escalation: two unrecognised intents
+    intent_detection --> closure: caller ends call
+
+    policy_check --> human_escalation: prohibited or out of policy
+    policy_check --> information_gathering: PIN required
+    policy_check --> tool_confirmation: low-risk or confirmed write
+
+    tool_confirmation --> tool_execution: explicit yes, args hash matches
+    tool_confirmation --> intent_detection: caller declines or changes order
+
+    tool_execution --> result_validation: tool returned
+    tool_execution --> human_escalation: timeout / termination / refusal
+    result_validation --> closure: schema valid, speak from tool JSON
+    result_validation --> human_escalation: malformed or missing fields
+
+    human_escalation --> closure: callback ticket raised
+    closure --> [*]

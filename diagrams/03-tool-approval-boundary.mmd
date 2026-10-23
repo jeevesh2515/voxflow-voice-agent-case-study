@@ -1,0 +1,24 @@
+%% VoxFlow — tool approval boundary (public contract)
+flowchart TD
+    Speech[Caller speech<br/>untrusted] --> Intent[Deterministic intent + argument extraction]
+    Intent --> Schema{Schema valid?}
+    Schema -- no --> Reject[Reject and re-ask]
+    Schema -- yes --> Identity{Identity bound to account?}
+    Identity -- no --> Refuse[Refuse / escalate]
+    Identity -- yes --> Kind{Tool class}
+
+    Kind -- read --> Execute[Execute]
+    Kind -- reversible write --> Confirm{Explicit confirmation<br/>args hash matches?}
+    Kind -- high-impact write --> Pin{PIN bound to same account?}
+    Kind -- prohibited --> Block[Block and log]
+
+    Pin -- no --> Refuse
+    Pin -- yes --> Confirm
+    Confirm -- no --> Cancel[Cancel, nothing written]
+    Confirm -- yes --> Idem{Idempotency key seen?}
+    Idem -- yes --> Replay[Return cached result<br/>no second write]
+    Idem -- no --> Execute
+
+    Execute --> Validate{Result schema valid?}
+    Validate -- no --> Escalate[Escalate, never speak data]
+    Validate -- yes --> Speak[Speak only allow-listed facts]

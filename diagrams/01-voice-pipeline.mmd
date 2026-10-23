@@ -1,0 +1,19 @@
+%% VoxFlow — PSTN and browser paths (sanitised)
+flowchart LR
+    Caller([Caller]) -->|UK DID| Connect[Amazon Connect<br/>contact flow]
+    Connect --> Lex[Lex V2<br/>en-GB speech capture]
+    Lex -->|transcript| Lambda[Lambda bridge<br/>HMAC-SHA256]
+    Lambda -->|POST /api/connect/turn| API[FastAPI<br/>AgentRunner]
+    API -->|reply text| Lambda
+    Lambda --> Connect
+    Connect -->|Polly / flow prompt| Caller
+
+    Browser([Browser simulator]) -->|PCM 16 kHz + commit| WS[/ws/call/]
+    WS --> API
+    API -->|MP3| Browser
+
+    API --> STT[Groq Whisper<br/>whisper-large-v3-turbo]
+    API --> LLM[Groq LLM<br/>gpt-oss-20b + fallbacks]
+    API --> Tools[(Postgres<br/>tenant-scoped tools)]
+    API --> Edge[Edge TTS<br/>en-GB-SoniaNeural]
+    Edge --> Browser

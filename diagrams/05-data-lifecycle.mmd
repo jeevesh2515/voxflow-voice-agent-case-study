@@ -1,0 +1,24 @@
+%% VoxFlow — data lifecycle (deployment-dependent)
+flowchart LR
+    subgraph Host["Application host"]
+        Audio[Call audio buffer]
+        Transcript[Transcript turns]
+        Audit[Tool + confirmation audit events]
+        Snap[Session snapshots]
+        DB[(Postgres<br/>calls, transcripts, escalations)]
+    end
+    subgraph Providers["Third-party providers"]
+        STT[STT provider]
+        LLM[LLM provider]
+        TTS[TTS provider]
+        Sheet[Google Sheets]
+        Telemetry[Error / product telemetry]
+    end
+    Audio --> STT --> Transcript --> LLM --> TTS
+    Transcript --> DB
+    Audit --> DB
+    Snap --> DB
+    DB -->|mirror, tenant allow-list| Sheet
+    DB --> Telemetry
+    Audio -.->|retention setting| Purge[Retention purge]
+    DB -.-> Purge

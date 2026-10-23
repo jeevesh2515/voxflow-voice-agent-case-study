@@ -1,0 +1,25 @@
+%% VoxFlow — tenant and provider boundaries
+flowchart TB
+    subgraph Public["Public internet"]
+        Caller[Caller]
+        Dashboard[Workspace user]
+    end
+    subgraph Edge["Edge"]
+        TLS[TLS termination]
+        AuthN[Supabase JWT verification]
+    end
+    subgraph TenantA["Tenant A boundary"]
+        A[(A-scoped rows)]
+        ATools[A-scoped tool calls]
+    end
+    subgraph TenantB["Tenant B boundary"]
+        B[(B-scoped rows)]
+        BTools[B-scoped tool calls]
+    end
+    Caller -->|DID exact match| TLS
+    Dashboard --> TLS --> AuthN
+    AuthN -->|membership check| ATools
+    AuthN -->|membership check| BTools
+    ATools --> A
+    BTools --> B
+    A -.->|no cross-tenant query path| B

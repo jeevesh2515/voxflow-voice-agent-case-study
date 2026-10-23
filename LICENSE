@@ -1,0 +1,37 @@
+Copyright (c) 2026 VoxFlow. All rights reserved.
+
+PROPRIETARY — VIEWING AND EVALUATION LICENCE
+
+This repository is a sanitized case study for the VoxFlow voice-agent product.
+Except for the material in `demo/` and `fixtures/synthetic/` (which is licensed
+under the MIT licence in `demo/LICENSE`), all content — including documentation,
+diagrams, code excerpts, architecture descriptions and the VoxFlow name — is
+proprietary and protected by copyright.
+
+Permission is granted, free of charge, to any person obtaining a copy of this
+repository to:
+
+1. view and read the content;
+2. clone the repository and run the synthetic demo locally;
+3. quote short excerpts with attribution for evaluation, review, teaching or
+   recruitment assessment.
+
+No other rights are granted. Without prior written permission from the copyright
+holder, you may not:
+
+1. use the content for commercial purposes;
+2. redistribute, sublicense, publish or sell the content, in whole or in part;
+3. create derivative works or incorporate the content into another product;
+4. use the content to train, evaluate or improve a competing product;
+5. remove or alter this notice or any attribution;
+6. use the VoxFlow name, logo or marks as a brand or endorsement.
+
+The demo and synthetic fixtures are separate: see `demo/LICENSE` (MIT).
+
+THE CONTENT IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM THE CONTENT OR ITS USE.
+
+This is a licence, not legal advice. For commercial licensing, contact the owner
+through the repository hosting profile once the repository is published.
