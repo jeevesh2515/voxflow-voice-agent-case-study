@@ -159,6 +159,8 @@ per-caller-number throttling, and alerting on distributed attempts.
 The highest-frequency real-world failure. The model is fluent and the caller is
 impatient; a plausible ETA is worse than “I can’t confirm”.
 
+![Deterministic Failure & Escalation Paths](diagrams/04-failure-escalation.svg)
+
 **What works:** tool-result classifier, allow-listed fields, lexical status guard,
 fixed escalation script, two-sentence cap.
 

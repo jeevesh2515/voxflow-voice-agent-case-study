@@ -10,24 +10,30 @@ credentials, customer identifiers, or production configuration.
 
 ## 1. System context
 
-```text
-Caller (PSTN)
-   │
-   ▼
-Amazon Connect (eu-west-2) ──► Lex V2 (en-GB)
-   │                                  │ transcript
-   │ call recording (optional)        ▼
-   ▼                          Lambda bridge (HMAC-SHA256)
-S3 recording bucket                 │  POST /api/connect/turn
-                                    ▼
-                            FastAPI application
-                              ├── AgentRunner (LLM + tools)
-                              ├── Postgres (tenants, calls, orders, audit)
-                              ├── Google Sheets (optional tenant mirror)
-                              └── Durable job ledger (workers disabled)
+![Voice Pipeline Architecture](diagrams/01-voice-pipeline.svg)
 
-Browser simulator ──WebSocket PCM──► /ws/call ──► same AgentRunner
-                                              └── Edge TTS (browser path only)
+```mermaid
+flowchart LR
+    Caller["PSTN Caller\n(UK DID)"] --> Connect["Amazon Connect\n(eu-west-2)"]
+    Connect --> Lex["Lex V2 STT\n(en-GB)"]
+    Lex -->|"Transcript"| Lambda["AWS Lambda Bridge\n(HMAC-SHA256)"]
+    Lambda -->|"POST /api/connect/turn"| API["FastAPI Application\n(AgentRunner Engine)"]
+
+    API --> Postgres[("PostgreSQL\n(Tenants, Calls, Orders)")]
+    API --> Sheets["Google Sheets\n(Tenant Mirror)"]
+    API --> JobLedger["Job Outbox Ledger\n(Zero-Lost-Turn)"]
+
+    Browser["Browser Simulator\n(PCM 16 kHz)"] -->|"/ws/call"| API
+
+    style Caller fill:#1E293B,stroke:#0284C7,stroke-width:2px,color:#F8FAFC
+    style Connect fill:#1E293B,stroke:#0284C7,stroke-width:2px,color:#F8FAFC
+    style Lex fill:#0EA5E9,stroke:#38BDF8,stroke-width:2px,color:#F8FAFC
+    style Lambda fill:#1E1B4B,stroke:#818CF8,stroke-width:2px,color:#F8FAFC
+    style API fill:#0F172A,stroke:#10B981,stroke-width:2px,color:#F8FAFC
+    style Postgres fill:#1C1917,stroke:#F59E0B,stroke-width:2px,color:#F8FAFC
+    style Sheets fill:#134E4A,stroke:#14B8A6,stroke-width:2px,color:#F8FAFC
+    style JobLedger fill:#334155,stroke:#94A3B8,stroke-width:2px,color:#F8FAFC
+    style Browser fill:#1E293B,stroke:#64748B,stroke-width:2px,color:#F8FAFC
 ```
 
 Two ingress paths share one turn engine:

@@ -11,6 +11,8 @@ to. Tool safety is therefore the core of this case study.
 > target contract so the missing gates are concrete and testable. Do not conflate
 > the two.
 
+![Tool Authorization & Approval Boundary](diagrams/03-tool-approval-boundary.svg)
+
 ---
 
 ## 1. Tool inventory

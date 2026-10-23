@@ -4,6 +4,8 @@ A turn is one caller utterance and one agent reply. This document follows the
 private product’s PSTN path and notes where the public demo differs. It does not
 describe audio internals in detail because the API never sees PSTN audio.
 
+![Call State Machine](diagrams/02-state-machine.svg)
+
 ---
 
 ## 1. Ingress
